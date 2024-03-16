@@ -1,0 +1,28 @@
+---
+import '../global.css'
+
+const {
+	dark = true,
+	title = 'MTF - Marçal Tordera Forcada'
+} = Astro.props
+---
+
+<html lang='es' class:list={[{ 'bg-zinc-900': dark }, 'scroll-smooth']}>
+	<head>
+		<meta charset='utf-8' />
+		<meta name='viewport' content='width=device-width' />
+		<title>{title}</title>
+		<meta name='theme-color' content='#fff600' />
+
+		<meta property='og:url' content='https://mtf.cat'/>
+		<meta property='og:type' content='website' />
+		<meta property='og:title' content={title} />
+
+		<link rel="stylesheet" href="/assets/estils.css">
+		<link rel="stylesheet" href="/assets/estilMTF.css">
+		<link rel="icon" type="image/x-icon" href="/favicon.png">
+
+	</head>
+
+	<body><slot /></body>
+</html>
